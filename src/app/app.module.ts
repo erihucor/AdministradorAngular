@@ -11,16 +11,24 @@ import { CabezeraComponent } from './cabezeras/cabezera/cabezera.component';
 import { CabezeraProductoComponent } from './cabezeras/cabezera-producto/cabezera-producto.component';
 import { CabezeraCategoriaComponent } from './cabezeras/cabezera-categoria/cabezera-categoria.component';
 import { HomeCategoriaComponent } from './Entidad/home-categoria/home-categoria.component';
-import { FormCategoriaComponent } from './Forms/form-categoria/form-categoria.component'
+import { FormCategoriaComponent } from './Forms/form-categoria/form-categoria.component';
+import { CabezeraEstadoComponent } from './cabezeras/cabezera-estado/cabezera-estado.component';
+import { HomeEstadoComponent } from './Entidad/home-estado/home-estado.component';
+import { FormEstadoComponent } from './Forms/form-estado/form-estado.component'
 
 const routes: Route[] = [
   {path:"",component:HomeComponent},
   {path:"productos",component:HomeComponent},
   {path:"productosEdit",component:FormComponent},
   {path:"productosEdit/:producto_id",component:FormComponent},
+
   {path:"categorias",component:HomeCategoriaComponent},
   {path:"categoriasEdit",component:FormCategoriaComponent},
-  {path:"categoriasEdit/:categoria_id",component:FormCategoriaComponent}
+  {path:"categoriasEdit/:categoria_id",component:FormCategoriaComponent},
+
+  {path:"estados",component:HomeEstadoComponent},
+  {path:"estadosEdit",component:FormEstadoComponent},
+  {path:"estadosEdit/:estado_id",component:FormEstadoComponent}
 ]
 @NgModule({
   declarations: [
@@ -31,7 +39,10 @@ const routes: Route[] = [
     CabezeraProductoComponent,
     CabezeraCategoriaComponent,
     HomeCategoriaComponent,
-    FormCategoriaComponent
+    FormCategoriaComponent,
+    CabezeraEstadoComponent,
+    HomeEstadoComponent,
+    FormEstadoComponent
   ],
   imports: [
     BrowserModule,

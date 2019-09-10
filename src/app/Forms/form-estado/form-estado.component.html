@@ -1,0 +1,9 @@
+<app-cabezera-estado></app-cabezera-estado>
+<h2>Crear Estado</h2>
+<div>
+  <div class="form-group">
+    <label for="estado">Nombre estado</label>
+    <input [(ngModel)]="estado.estado" type="text" class="form-control" id="estado" placeholder="">
+  </div>
+  <button (click)="saveEstado()" class="btn btn-primary">Agregar Estado</button>
+</div>
