@@ -1,5 +1,3 @@
-import { DecimalPipe } from '@angular/common';
-
 export interface Producto{
     producto_id?: number,
     nombreProducto: string,
