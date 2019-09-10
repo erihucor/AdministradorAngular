@@ -17,7 +17,10 @@ import { HomeEstadoComponent } from './Entidad/home-estado/home-estado.component
 import { FormEstadoComponent } from './Forms/form-estado/form-estado.component';
 import { HomeNoticiaComponent } from './Entidad/home-noticia/home-noticia.component';
 import { FormNoticiaComponent } from './Forms/form-noticia/form-noticia.component';
-import { CabezeraNoticiaComponent } from './cabezeras/cabezera-noticia/cabezera-noticia.component'
+import { CabezeraNoticiaComponent } from './cabezeras/cabezera-noticia/cabezera-noticia.component';
+import { CabezeraEventoComponent } from './cabezeras/cabezera-evento/cabezera-evento.component';
+import { FormEventoComponent } from './Forms/form-evento/form-evento.component'
+import { HomeEventoComponent } from './Entidad/home-evento/home-evento.component';
 
 const routes: Route[] = [
   {path:"",component:HomeComponent},
@@ -35,7 +38,11 @@ const routes: Route[] = [
 
   {path:"noticias",component:HomeNoticiaComponent},
   {path:"noticiasEdit",component:FormNoticiaComponent},
-  {path:"noticiasEdit/:noticia_id",component:FormNoticiaComponent}
+  {path:"noticiasEdit/:noticia_id",component:FormNoticiaComponent},
+
+  {path:"eventos",component:HomeEventoComponent},
+  {path:"eventosEdit",component:FormEventoComponent},
+  {path:"eventosEdit/:evento_id",component:FormEventoComponent}  
 ]
 @NgModule({
   declarations: [
@@ -52,7 +59,10 @@ const routes: Route[] = [
     FormEstadoComponent,
     HomeNoticiaComponent,
     FormNoticiaComponent,
-    CabezeraNoticiaComponent
+    CabezeraNoticiaComponent,
+    CabezeraEventoComponent,
+    HomeEventoComponent,
+    FormEventoComponent
   ],
   imports: [
     BrowserModule,

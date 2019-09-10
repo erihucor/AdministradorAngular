@@ -54,5 +54,6 @@ export class FormNoticiaComponent implements OnInit {
         alert("Error :(")
       });
     }
-  }}
+  }
+}
 

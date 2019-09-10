@@ -1,0 +1,28 @@
+<app-cabezera-evento></app-cabezera-evento>
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Titulo</th>
+      <th scope="col">Descripcion</th>
+      <th scope="col">Usuario</th>
+      <th scope="col">Ruta de Imagen</th>
+      <th scope="col">Link</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let evento of eventos">
+      <td>{{evento.evento_id}}</td>
+      <td>{{evento.titulo}}</td>
+      <td>{{evento.descripcion}}</td>
+      <td>{{evento.usuario_id}}</td>
+      <td>{{evento.src_imagen}}</td>
+      <td>{{evento.link}}</td>
+      <td>
+        <a class = "btn btn-primary btn-sm" routerLink="/eventosEdit/{{evento.evento_id}}">Ver/Editar</a>
+        <a class = "btn btn-primary btn-sm btn-danger" (click)="delete(evento.evento_id)">Eliminar</a>
+      </td>
+    </tr>
+  </tbody>
+</table>
