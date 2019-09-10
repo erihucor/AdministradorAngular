@@ -1,0 +1,26 @@
+<app-cabezera-noticia></app-cabezera-noticia>
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Titulo</th>
+      <th scope="col">Descripcion</th>
+      <th scope="col">Usuario</th>
+      <th scope="col">Ruta de Imagen</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let noticia of noticias">
+      <td>{{noticia.noticia_id}}</td>
+      <td>{{noticia.titulo}}</td>
+      <td>{{noticia.descripcion}}</td>
+      <td>{{noticia.usuario_id}}</td>
+      <td>{{noticia.src_imagen}}</td>
+      <td>
+        <a class = "btn btn-primary btn-sm" routerLink="/noticiasEdit/{{noticia.noticia_id}}">Ver/Editar</a>
+        <a class = "btn btn-primary btn-sm btn-danger" (click)="delete(noticia.noticia_id)">Eliminar</a>
+      </td>
+    </tr>
+  </tbody>
+</table>

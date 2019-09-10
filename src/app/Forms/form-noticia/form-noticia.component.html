@@ -1,0 +1,21 @@
+<app-cabezera-noticia></app-cabezera-noticia>
+<h2>Crear Noticia</h2>
+<div>
+  <div class="form-group">
+    <label for="usuario_id">Usuario asociado a la noticia</label>
+    <input [(ngModel)]="noticia.usuario_id" type="text" class="form-control" id="usuario_id" placeholder="">
+  </div>
+  <div class="form-group">
+    <label for="titulo">Titulo noticia</label>
+    <input [(ngModel)]="noticia.titulo" type="text" class="form-control" id="titulo" placeholder="">
+  </div>
+  <div class="form-group">
+    <label for="descripcion">Descripcion de noticia</label>
+    <textarea [(ngModel)]="noticia.descripcion" class="form-control" name="descripcion" id="descripcion" placeholder=""></textArea>
+  </div>
+  <div class="form-group">
+    <label for="src_imagen">Ruta de archivo imagen</label>
+    <input [(ngModel)]="noticia.src_imagen" type="text" class="form-control" id="src_imagen" placeholder="">
+  </div>
+  <button (click)="saveNoticia()" class="btn btn-primary">Agregar Noticia</button>
+</div>
