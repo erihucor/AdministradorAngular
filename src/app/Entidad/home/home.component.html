@@ -20,7 +20,7 @@
       <td>{{producto.categoria_id}}</td>
       <td>{{producto.estado_id}}</td>
       <td>
-        <a class = "btn btn-primary btn-sm" routerLink="/form/{{producto.producto_id}}">Ver/Editar</a>
+        <a class = "btn btn-primary btn-sm" routerLink="/productosEdit/{{producto.producto_id}}">Ver/Editar</a>
         <a class = "btn btn-primary btn-sm btn-danger" (click)="delete(producto.producto_id)">Eliminar</a>
       </td>
     </tr>

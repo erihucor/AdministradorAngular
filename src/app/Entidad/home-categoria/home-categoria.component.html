@@ -12,7 +12,7 @@
       <td>{{categoria.categoria_id}}</td>
       <td>{{categoria.categoria}}</td>
       <td>
-        <a class = "btn btn-primary btn-sm" routerLink="/form/{{categoria.categoria_id}}">Ver/Editar</a>
+        <a class = "btn btn-primary btn-sm" routerLink="/categoriasEdit/{{categoria.categoria_id}}">Ver/Editar</a>
         <a class = "btn btn-primary btn-sm btn-danger" (click)="delete(categoria.categoria_id)">Eliminar</a>
       </td>
     </tr>
