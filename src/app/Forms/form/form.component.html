@@ -1,0 +1,25 @@
+<app-cabezera-producto></app-cabezera-producto>
+<h2>Crear Producto</h2>
+<div>
+  <div class="form-group">
+    <label for="nombreProducto">Nombre producto</label>
+    <input [(ngModel)]="producto.nombreProducto" type="text" class="form-control" id="nombreProducto" placeholder="">
+  </div>
+  <div class="form-group">
+    <label for="precio">Precio producto</label>
+    <input [(ngModel)]="producto.precio" type="number" class="form-control" id="precio" placeholder="">
+  </div>
+  <div class="form-group">
+    <label for="cantidad">Cantidad producto</label>
+    <input [(ngModel)]="producto.cantidad" type="number" class="form-control" id="cantidad" placeholder="">
+  </div>
+  <div class="form-group">
+    <label for="categoria_id">Categoria producto</label>
+    <input [(ngModel)]="producto.categoria_id" type="text" class="form-control" id="categoria_id" placeholder="">
+  </div>
+  <div class="form-group">
+    <label for="estado_id">Estado producto</label>
+    <input [(ngModel)]="producto.estado_id" type="text" class="form-control" id="estado_id" placeholder="">
+  </div>
+  <button (click)="saveProducto()" class="btn btn-primary">Agregar Producto</button>
+</div>

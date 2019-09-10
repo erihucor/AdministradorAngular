@@ -1,0 +1,28 @@
+<app-cabezera-producto></app-cabezera-producto>
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Precio</th>
+      <th scope="col">Cantidad</th>
+      <th scope="col">Categoria</th>
+      <th scope="col">Estado</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let producto of productos">
+      <td>{{producto.producto_id}}</td>
+      <td>{{producto.nombreProducto}}</td>
+      <td>{{producto.precio}}</td>
+      <td>{{producto.cantidad}}</td>
+      <td>{{producto.categoria_id}}</td>
+      <td>{{producto.estado_id}}</td>
+      <td>
+        <a class = "btn btn-primary btn-sm" routerLink="/form/{{producto.producto_id}}">Ver/Editar</a>
+        <a class = "btn btn-primary btn-sm btn-danger" (click)="delete(producto.producto_id)">Eliminar</a>
+      </td>
+    </tr>
+  </tbody>
+</table>

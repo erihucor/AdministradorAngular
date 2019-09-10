@@ -1,0 +1,20 @@
+<app-cabezera-categoria></app-cabezera-categoria>
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Categoria</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let categoria of categorias">
+      <td>{{categoria.categoria_id}}</td>
+      <td>{{categoria.categoria}}</td>
+      <td>
+        <a class = "btn btn-primary btn-sm" routerLink="/form/{{categoria.categoria_id}}">Ver/Editar</a>
+        <a class = "btn btn-primary btn-sm btn-danger" (click)="delete(categoria.categoria_id)">Eliminar</a>
+      </td>
+    </tr>
+  </tbody>
+</table>
