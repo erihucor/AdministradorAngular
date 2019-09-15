@@ -1,0 +1,28 @@
+<app-cabezera-pedido></app-cabezera-pedido>
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">usuario_id</th>
+      <th scope="col">EstadoPedido_id</th>
+      <th scope="col">Producto_id</th>
+      <th scope="col">Cantidad</th>
+      <th scope="col">Precio</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let pedido of pedidos">
+      <td>{{pedido.pedido_id}}</td>
+      <td>{{pedido.usuario_id}}</td>
+      <td>{{pedido.estadoPedido_id}}</td>
+      <td>{{pedido.producto_id}}</td>
+      <td>{{pedido.cantidad}}</td>
+      <td>{{pedido.precio}}</td>
+      <td>
+        <a class = "btn btn-primary btn-sm" routerLink="/pedidosEdit/{{pedido.pedido_id}}">Ver/Editar</a>
+        <a class = "btn btn-primary btn-sm btn-danger" (click)="delete(pedido.pedido_id)">Eliminar</a>
+      </td>
+    </tr>
+  </tbody>
+</table>
