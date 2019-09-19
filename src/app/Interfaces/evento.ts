@@ -3,6 +3,6 @@ export interface Evento{
     usuario_id: number,
     titulo:string,
     descripcion:string,
-    src_imagen:string
+    src_imagen:string,
     link:string
 }

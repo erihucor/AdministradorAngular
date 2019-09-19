@@ -24,6 +24,10 @@ import { HomeEventoComponent } from './Entidad/home-evento/home-evento.component
 import { CabezeraPedidoComponent } from './cabezeras/cabezera-pedido/cabezera-pedido.component';
 import { HomePedidoComponent } from './Entidad/home-pedido/home-pedido.component';
 import { FormPedidoComponent } from './Forms/form-pedido/form-pedido.component';
+import { FormInformacionComponent } from './Forms/form-informacion/form-informacion.component';
+import { PaginaAboutComponent } from './paginas/pagina-about/pagina-about.component';
+import { PaginaContactoComponent } from './paginas/pagina-contacto/pagina-contacto.component';
+import { PaginaAguaComponent } from './paginas/pagina-agua/pagina-agua.component';
 
 const routes: Route[] = [
   {path:"",component:HomeComponent},
@@ -41,6 +45,7 @@ const routes: Route[] = [
 
   {path:"noticias",component:HomeNoticiaComponent},
   {path:"noticiasEdit",component:FormNoticiaComponent},
+
   {path:"noticiasEdit/:noticia_id",component:FormNoticiaComponent},
 
   {path:"eventos",component:HomeEventoComponent},
@@ -49,7 +54,15 @@ const routes: Route[] = [
   
   {path:"pedidos",component:HomePedidoComponent},
   {path:"pedidosEdit",component:FormPedidoComponent},
-  {path:"pedidosEdit/:evento_id",component:FormPedidoComponent} 
+  {path:"pedidosEdit/:evento_id",component:FormPedidoComponent},
+
+  {path:"solicitarInfo",component:FormInformacionComponent},
+  
+  
+  {path:"agua",component:PaginaAguaComponent},
+  {path:"about",component:PaginaAboutComponent},
+  {path:"contacto",component:PaginaContactoComponent},
+
 ]
 @NgModule({
   declarations: [
@@ -72,7 +85,11 @@ const routes: Route[] = [
     FormEventoComponent,
     CabezeraPedidoComponent,
     HomePedidoComponent,
-    FormPedidoComponent
+    FormPedidoComponent,
+    FormInformacionComponent,
+    PaginaAguaComponent,
+    PaginaAboutComponent,
+    PaginaContactoComponent,
   ],
   imports: [
     BrowserModule,

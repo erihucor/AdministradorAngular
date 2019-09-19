@@ -1,0 +1,12 @@
+<h2>Solicitar informacion</h2>
+<div>
+  <div class="form-group">
+    <label for="name">Nombre: </label>
+    <input [(ngModel)]="informacion.name" type="text" class="form-control" id="name" placeholder="">
+  </div>
+  <div class="form-group">
+    <label for="msg">Mensaje: </label>
+    <input [(ngModel)]="informacion.msg" type="text" class="form-control" id="msg" placeholder="">
+  </div>
+  <button (click)="saveInformacion()" class="btn btn-primary">Enviar solicitud de informacion</button>
+</div>
